@@ -9,9 +9,7 @@ public class product {
 		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.id = id;
-		this.name = name;
-		this.price = price;
+		
 		
 	}
 	public int getId() {
