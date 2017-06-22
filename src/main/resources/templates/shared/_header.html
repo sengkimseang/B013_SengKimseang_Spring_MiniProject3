@@ -81,22 +81,17 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="hidden-xs">
-                                    <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
-                                </li>
-                                <span class="dropdown"><a href="?lang=en" class="dropdown-toggle profile"><img th:src="@{/resources/static/images/us_s.png}" alt="user-img" class="img-circle"></a> </span>
-                                <span class="dropdown"><a href="?lang=kh" class="dropdown-toggle profile"><img th:src="@{/resources/static/images/cambodia.png}" alt="user-img" class="img-circle"></a> </span>
                                 
-                                <!-- 
+                                 <span class="imga"><a href="?lang=en" class="dropdown-toggle profile"><img th:src="@{/resources/static/images/us_s.png}" alt="user-img" class="img-circle"></a> </span>
+                                <span class="imga"><a href="?lang=kh" class="dropdown-toggle profile"><img th:src="@{/resources/static/images/cambodia.png}" alt="user-img" class="img-circle"></a> </span>
+                               
+                                <li class="hidden-xs">
+                                	
+                                    <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
+                                </li> 
+                                
                                 <li class="dropdown">
-                                  <a href="?lang=en" > <a class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"> <img th:src="@{/resources/static/images/us_s.png}" alt="user-img" class="img-circle"> </a> </a>
-                                </li>
-                                <li class="dropdown">
-                                  <a href="?lang=kh" > <a class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"> <img th:src="@{/resources/static/images/cambodia.png}" alt="user-img" class="img-circle"></a> </a>
-                                </li>
-                                 -->
-                                <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img th:src="@{/resources/static/images/me.jpg}" alt="user-img" class="img-circle"> </a>
+                                	<a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img th:src="@{/resources/static/images/me.jpg}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="javascript:void(0)" th:text="#{profile}"><i class="md md-face-unlock"></i> Profile</a></li>
                                         <li><a href="javascript:void(0)" th:text="#{setting}"><i class="md md-settings"></i> Settings</a></li>
