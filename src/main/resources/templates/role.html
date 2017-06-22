@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+                layout:decorator="admin-layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Role Form</title>
+</head>
+<body class="fixed-left">
+ <div layout:fragment="content">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
+
+                        <!-- Form-validation -->
+                        <div class="row">
+                        
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"><h3 class="panel-title" th:text="#{formrole}">Form Role</h3></div>
+                                    <div class="panel-body">
+                                        <div class=" form">
+                                            <form class="cmxform form-horizontal tasi-form" id="signupForm" method="get" action="#" novalidate="novalidate">
+                                                <div class="form-group ">
+                                                    <label for="firstname" class="control-label col-lg-2" th:text="#{fname}">Firstname *</label>
+                                                    <div class="col-lg-10">
+                                                        <input class=" form-control" id="firstname" name="firstname" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group ">
+                                                    <label for="lastname" class="control-label col-lg-2"​​ th:text="#{lname}">Lastname  *</label>
+                                                    <div class="col-lg-10">
+                                                        <input class=" form-control" id="lastname" name="lastname" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group ">
+                                                    <label for="username" class="control-label col-lg-2" th:text="#{username}">Username *</label>
+                                                    <div class="col-lg-10">
+                                                        <input class="form-control " id="username" name="username" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group ">
+                                                    <label for="password" class="control-label col-lg-2" th:text="#{password}"​>Password *</label>
+                                                    <div class="col-lg-10">
+                                                        <input class="form-control " id="password" name="password" type="password">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group ">
+                                                    <label for="confirm_password" class="control-label col-lg-2"​ th:text="#{cp}"​>Confirm Password *</label>
+                                                    <div class="col-lg-10">
+                                                        <input class="form-control " id="confirm_password" name="confirm_password" type="password">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group ">
+                                                    <label for="email" class="control-label col-lg-2"​ th:text="#{e}">Email *</label>
+                                                    <div class="col-lg-10">
+                                                        <input class="form-control " id="email" name="email" type="email">
+                                                    </div>
+                                                </div>
+                                               
+                                            
+                                                
+
+                                                <div class="form-group">
+                                                    <div class="col-lg-offset-2 col-lg-10">
+                                                        <button class="btn btn-success waves-effect waves-light" type="submit" th:text="#{save}">Save</button>
+                                                        <button class="btn btn-default waves-effect" type="button" th:text="#{cancel}">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div> <!-- .form -->
+
+                                    </div> <!-- panel-body -->
+                                </div> <!-- panel -->
+                            </div> <!-- col -->
+
+                        </div> <!-- End row -->
+
+
+
+            </div> <!-- container -->
+                               
+                </div> <!-- content -->
+
+                <footer class="footer text-right">
+                    2015 © Moltran.
+                </footer>
+
+  </div>
+ 
+</body>
+</html>

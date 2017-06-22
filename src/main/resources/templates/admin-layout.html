@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+     <meta name="author" content="Coderthemes">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE"> Spring </title>
+	<link rel="stylesheet" th:href="@{/resources/static/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <style th:replace="@{/shared/_style}"></style>
+
+</head>
+<body>
+
+    <div th:replace="@{/shared/_header}"></div>
+
+    <div th:replace="@{/shared/_left-side-bar}"></div>
+
+    <div layout:fragment="content" class="content-page">
+    </div>
+    
+    <div th:replace="@{/shared/_footer}"></div>
+
+    <div th:replace="@{/shared/_right-side-bar}"></div>
+
+    <div th:replace="@{/shared/_script}"></div>
+
+</body>
+</html>
