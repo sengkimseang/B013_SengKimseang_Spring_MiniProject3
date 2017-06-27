@@ -3,12 +3,12 @@
                 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
                 layout:decorator="admin-layout">
 <head>
-    <meta charset="UTF-8">
-    <title>User</title>
+<meta charset="ISO-8859-1">
+<title>User_Detail</title>
 </head>
-<body class="fixed-left">
+<body  class="fixed-left">
  <div layout:fragment="content">
- 			<div class="content">
+ <div class="content">
                     <div class="container">
  		<div class="row">
                             <div class="col-sm-12">
@@ -26,55 +26,50 @@
                                     <div class="panel-heading"><h3 class="panel-title" th:text="#{formval}">Form validations</h3></div>
                                     <div class="panel-body">
                                         <div class=" form">
-                                            <form class="cmxform form-horizontal tasi-form" id="commentForm" th:method="POST" th:action="${addStatus==true?'/usersave':'/update/'}+*{user_hash}" novalidate="novalidate" th:object="${user}">
+                                            <form class="cmxform form-horizontal tasi-form" id="commentForm" th:method="GET"  novalidate="novalidate">
                                                 <div class="form-group ">
                                                     <label for="cname" class="control-label col-lg-2"  >ID</label>
                                                     <div class="col-lg-10">
-                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" th:field="*{id}">
+                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" readonly="readonly" >
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                     <label for="cname" class="control-label col-lg-2" >Name </label>
                                                     <div class="col-lg-10">
-                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" th:field="*{username}" >
+                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" readonly="readonly" >
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                     <label for="cemail" class="control-label col-lg-2">E-Mail </label>
                                                     <div class="col-lg-10">
-                                                        <input class="form-control " id="cemail" type="email" name="email" required="" aria-required="true"  th:field="*{email}">
+                                                        <input class="form-control " id="cemail" type="email" name="email" required="" aria-required="true"  readonly="readonly">
                                                     </div>
                                                 </div>
                                          
                                                 <div class="form-group ">
                                                     <label for="cname" class="control-label col-lg-2" >Gender </label>
                                                     <div class="col-lg-10">
-                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" th:field="*{gender}" >
+                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true"  readonly="readonly">
                                                     </div>
                                                 </div>
                                                 <div class="form-group ">
                                                      <label for="cname" class="control-label col-lg-2" >Phone Number </label>
                                                     <div class="col-lg-10">
-                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" th:field="*{phonenumber}" >
+                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" readonly="readonly">
                                                     </div>
                                                 </div><div class="form-group ">
                                                      <label for="cname" class="control-label col-lg-2" >Status </label>
                                                     <div class="col-lg-10">
-                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" th:field="*{status}" >
+                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" readonly="readonly" >
                                                     </div>
                                                 </div><div class="form-group ">
                                                      <label for="cname" class="control-label col-lg-2" >user_hash </label>
                                                     <div class="col-lg-10">
-                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" th:field="*{user_hash}" readonly="readonly">
+                                                        <input class=" form-control" id="cname" name="name" type="text" required="" aria-required="true" readonly="readonly" >
                                                     </div>
                                                 </div>
                                                
-                                                <div class="form-group">
-                                                    <div class="col-lg-offset-2 col-lg-10">
-                                                        <button class="btn btn-success waves-effect waves-light" type="submit" th:text="#{btnsave}" ></button>
-                                                        <button class="btn btn-default waves-effect" type="button" th:text="#{cancel}">Cancel</button>
-                                                    </div>
-                                                </div>
+                                               
                                             </form>
                                         </div> <!-- .form -->
                                     </div> <!-- panel-body -->
@@ -87,7 +82,10 @@
           <footer class="footer text-right">
                     2015 © Seng Kimseang.
                 </footer> 
+ 
+ 
+ 
+ 
  </div>
-
 </body>
 </html>
