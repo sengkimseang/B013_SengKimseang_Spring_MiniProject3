@@ -28,7 +28,18 @@ public class MainController {
 	}
 
     @RequestMapping({"/", "/dashboard"})
-    public String homePage() {
+    public String homePage(ModelMap modelMap) {
+    	int totalUser= userService.countTotal();
+    	int totalMale= userService.countMale();
+    	int totalFemale = userService.countFemale();
+    	int totalUserfales = userService.countUserfales();
+    	
+    	modelMap.addAttribute("TOTALUSER", totalUser);
+    	modelMap.addAttribute("TOTALMALE", totalMale);
+    	modelMap.addAttribute("TOTALFEMALE", totalFemale);
+    	modelMap.addAttribute("TOTALUSERFALSE", totalUserfales);
+    	
+    	
         return "dashboard";
     }
    
@@ -58,12 +69,13 @@ public class MainController {
 		User user=userService.findone(user_hash);
 		model.addAttribute("user", user);
 		model.addAttribute("addStatus", false);
+		System.out.println("USER HASH at Edit " + user.getUser_hash());
     	return "User";	
     }
-    @RequestMapping("/update/{hashCode}")
-    public String update(@PathVariable("hashCode") String hashCode, @ModelAttribute("user") User user){
-    	user.setUser_hash(hashCode);
-    	System.out.println(user.getUser_hash());
+    @RequestMapping("/update")
+    public String update( @ModelAttribute("user") User user){
+    	
+    	System.out.println("USER HASH at udpate " + user.getUser_hash());
     	if(userService.update(user)){
     		System.out.println("Update Successfully");
     	}else{

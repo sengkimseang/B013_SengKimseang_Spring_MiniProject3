@@ -53,4 +53,18 @@ public interface UserRepository {
 	
 	@Delete("Update testuser set status='false' where user_hash= #{user_hash}")
 	public boolean delete(@Param("user_hash") String user_hash);
+
+	
+	@Select("SELECT count(*) from testuser WHERE status='true'")
+	int countTotal();
+
+	@Select("SELECT count(*) from testuser WHERE gender='M' AND status='true'")
+	int countMale();
+	
+	@Select("SELECT count(*) from testuser WHERE gender='F' AND status='true'")
+	int countFemale();
+	
+	@Select("SELECT count(*) from testuser WHERE  status='false'")
+	int countUserfales();
+
 }

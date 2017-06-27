@@ -52,4 +52,25 @@ public class UserServiceImpl implements  UserService{
 		return userRepository.detail(user_hash);
 	}
 	
+	@Override
+	public int countTotal(){
+		return userRepository.countTotal();
+	}
+	
+	@Override
+	public int countMale(){
+		return userRepository.countMale();
+		
+	}
+	@Override
+	public int countFemale(){
+		return userRepository.countFemale();
+	}
+	
+	@Override
+	public int countUserfales(){
+		return userRepository.countUserfales();
+	}
+	
+	
 }

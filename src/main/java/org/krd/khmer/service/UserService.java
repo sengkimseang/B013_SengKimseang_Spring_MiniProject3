@@ -11,5 +11,9 @@ public interface UserService {
 	public boolean delete(String user_hash);
 	public User findone(String user_hash);
 	public User detail(String user_hash);
+	int countTotal();
+	int countMale();
+	int countFemale();
+	int countUserfales();
 	
 }
